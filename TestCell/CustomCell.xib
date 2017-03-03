@@ -11,11 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="200" id="KGk-i7-Jjw" customClass="CustomCell" customModule="TestCell" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="200" id="KGk-i7-Jjw" customClass="CustomCell" customModule="TestCell" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="287" height="199"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="199"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2oT-YN-MVy">
@@ -25,7 +25,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1O-O1-8oD">
-                        <rect key="frame" x="94" y="10" width="193" height="21"/>
+                        <rect key="frame" x="94" y="10" width="226" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -37,7 +37,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QW2-QO-Vx9">
-                        <rect key="frame" x="94" y="41" width="193" height="21"/>
+                        <rect key="frame" x="94" y="41" width="226" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -50,7 +50,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnM-jk-9IY">
-                        <rect key="frame" x="94" y="72" width="193" height="21"/>
+                        <rect key="frame" x="94" y="72" width="226" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -58,23 +58,23 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="c1O-O1-8oD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="94" id="8ad-6m-mK8"/>
+                    <constraint firstItem="QW2-QO-Vx9" firstAttribute="leading" secondItem="c1O-O1-8oD" secondAttribute="leading" id="BJY-Wh-B6D"/>
                     <constraint firstItem="EmQ-1I-atC" firstAttribute="leading" secondItem="2oT-YN-MVy" secondAttribute="leading" id="C6v-qm-HQc"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="EmQ-1I-atC" secondAttribute="bottom" constant="10" id="Dhg-Rj-5UC"/>
-                    <constraint firstAttribute="trailing" secondItem="vnM-jk-9IY" secondAttribute="trailing" id="E6c-FH-dNA"/>
-                    <constraint firstItem="vnM-jk-9IY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="94" id="Eks-oX-hE4"/>
                     <constraint firstItem="EmQ-1I-atC" firstAttribute="trailing" secondItem="2oT-YN-MVy" secondAttribute="trailing" id="KRu-Wa-DVo"/>
                     <constraint firstAttribute="trailing" secondItem="c1O-O1-8oD" secondAttribute="trailing" id="NTz-eO-obE"/>
-                    <constraint firstAttribute="trailing" secondItem="QW2-QO-Vx9" secondAttribute="trailing" id="Qd8-7L-D2Q"/>
+                    <constraint firstItem="QW2-QO-Vx9" firstAttribute="trailing" secondItem="c1O-O1-8oD" secondAttribute="trailing" id="TJB-iM-Zue"/>
                     <constraint firstItem="2oT-YN-MVy" firstAttribute="trailing" secondItem="vCz-we-4g2" secondAttribute="trailing" id="WLV-Tl-8jB"/>
                     <constraint firstItem="vCz-we-4g2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="bGd-df-NTW"/>
+                    <constraint firstItem="vnM-jk-9IY" firstAttribute="trailing" secondItem="c1O-O1-8oD" secondAttribute="trailing" id="bnt-6Y-heY"/>
                     <constraint firstItem="2oT-YN-MVy" firstAttribute="top" secondItem="vCz-we-4g2" secondAttribute="bottom" constant="10" id="eBg-9l-Lev"/>
                     <constraint firstItem="EmQ-1I-atC" firstAttribute="top" secondItem="2oT-YN-MVy" secondAttribute="bottom" constant="10" id="hKN-uz-fX9"/>
-                    <constraint firstItem="QW2-QO-Vx9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="94" id="jIp-wx-q8v"/>
                     <constraint firstItem="2oT-YN-MVy" firstAttribute="leading" secondItem="vCz-we-4g2" secondAttribute="leading" id="kr1-6o-aeF"/>
                     <constraint firstItem="vCz-we-4g2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="lMF-mU-gTS"/>
                     <constraint firstItem="QW2-QO-Vx9" firstAttribute="top" secondItem="c1O-O1-8oD" secondAttribute="bottom" constant="10" id="pIZ-Xg-34j"/>
                     <constraint firstItem="c1O-O1-8oD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="sO6-47-b9J"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="vnM-jk-9IY" secondAttribute="bottom" constant="10" id="ucK-Ev-wSO"/>
+                    <constraint firstItem="vnM-jk-9IY" firstAttribute="leading" secondItem="c1O-O1-8oD" secondAttribute="leading" id="wRd-kJ-drb"/>
                     <constraint firstItem="vnM-jk-9IY" firstAttribute="top" secondItem="QW2-QO-Vx9" secondAttribute="bottom" constant="10" id="yB1-wP-sJb"/>
                 </constraints>
             </tableViewCellContentView>
@@ -82,6 +82,8 @@
                 <outlet property="label1" destination="c1O-O1-8oD" id="NRJ-fu-a5c"/>
                 <outlet property="label2" destination="QW2-QO-Vx9" id="dYS-PK-Kvi"/>
                 <outlet property="label3" destination="vnM-jk-9IY" id="Drk-Xc-RWl"/>
+                <outlet property="leadingConstraint" destination="8ad-6m-mK8" id="ggs-uO-ckG"/>
+                <outlet property="trailingConstraing" destination="NTz-eO-obE" id="A9G-ss-CLu"/>
             </connections>
             <point key="canvasLocation" x="86" y="138"/>
         </tableViewCell>
