@@ -16,20 +16,28 @@ class CustomCell: UITableViewCell {
     @IBOutlet weak var trailingConstraing: NSLayoutConstraint!
     @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
 
+    var accessoryViewFrameWidth: CGFloat {
+        guard accessoryType != .none else {
+            return 0
+        }
+        if UIScreen.main.bounds.width >= 414 {
+            return 38
+        }
+        return 33
+    }
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-//        let screenWidth = UIScreen.main.bounds.width
-//        print(">>>>", bounds.width, " : ", screenWidth)
-//        if #available(iOS 9.0, *) {
-//        } else {
-//            if screenWidth != bounds.width && screenWidth > 400 {
-//                let constraintWidth = screenWidth - 33 - leadingConstraint.constant
-//                label1.preferredMaxLayoutWidth = constraintWidth
-//                label2.preferredMaxLayoutWidth = constraintWidth
-//                label3.preferredMaxLayoutWidth = constraintWidth
-//            }
-//        }
+        if #available(iOS 9.0, *) {
+        } else {
+            let screenWidth = UIScreen.main.bounds.width
+            print(">>>>", bounds.width, " : ", screenWidth)
+            let constraintWidth = screenWidth - accessoryViewFrameWidth - leadingConstraint.constant
+            label1.preferredMaxLayoutWidth = constraintWidth
+            label2.preferredMaxLayoutWidth = constraintWidth
+            label3.preferredMaxLayoutWidth = constraintWidth
+        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -37,15 +45,4 @@ class CustomCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
-//    override func layoutSubviews() {
-//        super.layoutSubviews()
-//        var width = UIScreen.main.bounds.width - 5
-//        width -= (33 + 94)
-//        let w = label1.frame.width
-//        print(">>>>>>>>>", w, " : ", width)
-//        label1.preferredMaxLayoutWidth = width
-//        label2.preferredMaxLayoutWidth = width
-//        label3.preferredMaxLayoutWidth = width
-//    }
 }

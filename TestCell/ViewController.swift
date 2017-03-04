@@ -50,12 +50,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         cell.label1.text = person.0
         cell.label2.text = person.1
         cell.label3.text = person.2
-        cell.accessoryType = .disclosureIndicator
         return cell
-    }
-
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-//        cell.accessoryType = .disclosureIndicator
     }
 }
 
