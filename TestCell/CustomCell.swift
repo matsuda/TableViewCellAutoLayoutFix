@@ -13,8 +13,6 @@ class CustomCell: UITableViewCell {
     @IBOutlet weak var label1: UILabel!
     @IBOutlet weak var label2: UILabel!
     @IBOutlet weak var label3: UILabel!
-    @IBOutlet weak var trailingConstraing: NSLayoutConstraint!
-    @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
 
     var accessoryViewFrameWidth: CGFloat {
         guard accessoryType != .none else {
@@ -29,20 +27,30 @@ class CustomCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        if #available(iOS 9.0, *) {
-        } else {
-            let screenWidth = UIScreen.main.bounds.width
-            print(">>>>", bounds.width, " : ", screenWidth)
-            let constraintWidth = screenWidth - accessoryViewFrameWidth - leadingConstraint.constant
-            label1.preferredMaxLayoutWidth = constraintWidth
-            label2.preferredMaxLayoutWidth = constraintWidth
-            label3.preferredMaxLayoutWidth = constraintWidth
-        }
+        adjustPreferredMaxLayoutWidth(label: label1)
+        adjustPreferredMaxLayoutWidth(label: label2)
+        adjustPreferredMaxLayoutWidth(label: label3)
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    func adjustPreferredMaxLayoutWidth(label: UILabel) {
+        if #available(iOS 9.0, *) { return }
+        let rect = convertToContentView(from: label)
+        let screenWidth = UIScreen.main.bounds.width
+        let constraintWidth = screenWidth - accessoryViewFrameWidth - rect.origin.x
+        label.preferredMaxLayoutWidth = constraintWidth
+    }
 
-        // Configure the view for the selected state
+    func convertToContentView(from view: UIView) -> CGRect {
+        var rect = view.frame
+        var parent = view.superview
+//        print("rect >>>>>>", rect)
+//        print("parent >>>", parent)
+        while parent != nil && parent != contentView {
+            rect = view.convert(view.bounds, to: parent?.superview)
+            parent = parent?.superview
+//            print("in rect >>>>>>>", rect)
+//            print("in parent >>>", parent)
+        }
+        return rect
     }
 }
